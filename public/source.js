@@ -42,13 +42,13 @@
 
 
   //redirect animation
-  $('.portfolio-item').click(function(){
-      var href= $(this).attr('href');
-      // do animation
-      $('body').fadeTo( 350, 0.5, function(){
-            window.location=href;
-      });
-      return false;
-  });
+  // $('.portfolio-item').click(function(){
+  //     var href= $(this).attr('href');
+  //     // do animation
+  //     $('body').fadeTo( 350, 0.5, function(){
+  //           window.location=href;
+  //     });
+  //     return false;
+  // });
 
 })(jQuery); // End of use strict
