@@ -40,20 +40,15 @@
     }
   });
 
- //  $('.portfolio-item').mouseover(function(event) {
- //   $(this).find('i').show();
- //  });
- //
- //  $('.portfolio-item').mouseout(function(event) {
- //   $(this).find('.project-menu').hide();
- // });
 
-  // $( ".portfolio-item" )
-  //   .on("mouseenter", function() {
-  //     $(".project-menu").show();
-  //   })
-  //   .on("mouseleave", function() {
-  //     $(".project-menu").hide();
-  //   });
+  //redirect animation
+  $('.portfolio-item').click(function(){
+      var href= $(this).attr('href');
+      // do animation
+      $('body').fadeTo( 350, 0.5, function(){
+            window.location=href;
+      });
+      return false;
+  });
 
 })(jQuery); // End of use strict
