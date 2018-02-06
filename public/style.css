@@ -11,6 +11,14 @@ html {
 body {
   font-family: 'Source Sans Pro'; }
 
+  #canvas {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; }
+
 .btn-xl {
   padding: 1.25rem 2.5rem; }
 
@@ -73,7 +81,7 @@ h6 {
   height: auto;
   padding-top: 8rem;
   padding-bottom: 8rem;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("img/bg-masthead.jpg");
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("img/rocket-bg.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -237,7 +245,18 @@ h6 {
           font-size: 3em;
           text-align: center;
           color: white; }
+    
   @media (min-width: 992px) {
+    .masthead {
+      background: none;
+    }
+    #canvas {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1; }
     .portfolio-item {
       max-width: none;
       margin: 0; }
