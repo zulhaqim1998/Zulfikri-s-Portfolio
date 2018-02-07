@@ -47,18 +47,6 @@ window.onload = function(){
     planet1.src = "./animation/pln.png";
     planet2.src = "./animation/pln2.png";
     light.src = "./animation/light.png";
-    // light.onload = function(){
-    //   context.drawImage(light, 680, 300, 100, 100);
-    // };
-    // rocket.onload = function(){
-    //   context.drawImage(rocket, canvas.width / 2 - 100, canvas.height / 2 - 85, 170, 170);
-    // };
-    // planet1.onload = function(){
-    //   context.drawImage(planet1, 70, planet1Y, 300, 300);
-    // };
-    // planet2.onload = function(){
-    //   context.drawImage(planet2, 980, planet2Y, 200, 200);
-    // };
 
     //generate stars
     for(var star, i = 0; i < starNum; i++){
@@ -89,15 +77,13 @@ window.onload = function(){
       planet1Y += 2;
       planet2Y += 1;
 
-      // fires.forEach(drawFire);
-      // context.fillStyle = 'blue';
-      //context.fillText('Hello world', 300, 50);
-      context.drawImage(light, 623 + 250, 300, 66, 480);
+      if(window.innerWidth > 922) {
+        context.drawImage(light, 623 + 250, 300, 66, 480);
 
-      context.drawImage(planet1, 70, planet1Y, 350, 350);
-      context.drawImage(planet2, 980, planet2Y, 200, 200);
-      context.drawImage(rocket, canvas.width / 2 - 100 + 250, canvas.height / 2 - 85, 170, 170);
-
+        context.drawImage(planet1, 70, planet1Y, 350, 350);
+        context.drawImage(planet2, 980, planet2Y, 200, 200);
+        context.drawImage(rocket, canvas.width / 2 - 100 + 250, canvas.height / 2 - 85, 170, 170);
+      }
 
       stars.forEach(draw);
     }());
